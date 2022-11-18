@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+const { Sider } = Layout;
 const App = () => (
-      <Header>Header</Header>
+      <Sider>sider</Sider>
 
 );
 export default App;
