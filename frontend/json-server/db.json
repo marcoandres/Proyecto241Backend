@@ -1,28 +1,21 @@
 {
-    "layout": [
-      {
-        "id": 0,
-        "name": "Header",
-        "timeReceived": "10:21 AM",
-        "subject": "RE: Meeting Review",
-        "message": "Hi Amanda, following up again regarding the schedule with Chris. Please respond back with your availability. Thanks, Aspen",
-        "starred": true
-      },
+    "products": [
       {
         "id": 1,
-        "name": "Footer",
-        "timeReceived": "11:45 AM",
-        "subject": "Feedback Session",
-        "message": "Hi Amanda, Please let me know when you are available on Monday to go over the session we had last Wednesday. Thanks, Mila",
-        "starred": true
+        "name": "Pan",
+        "price": 1234,
+        "description": "Pan a base de harina de trigo, 3 sellos",
+        "image": "https://img.freepik.com/free-photo/delicious-bread-table_144627-12454.jpg?w=996&t=st=1668790311~exp=1668790911~hmac=e7b92f3e6e12c96bf79d880a0fd8997a3750b5763e711005a43c5a3b06621eee",
+        "enabled": true
       },
       {
         "id": 2,
-        "name": "Content",
-        "timeReceived": "1:10 PM",
-        "subject": "Issue with Reporting",
-        "message": "Hey Amanda, I am not able to verify my account and cannot access the file needed for my current task. If you could please get back to me ASAP about this issue, it would be greatly appreciated. All the best, Alan",
-        "starred": false
+        "name": "Pan Marraqueta",
+        "price": 2239,
+        "description": "Pan Batido a base de harina de trigo con sal, 3 sellos",
+        "image": "https://img.freepik.com/free-photo/top-view-basket-full-breads-as-baguette-bagel-rye-with-sunflower-seeds-black-surface_141793-1541.jpg?w=900&t=st=1668790392~exp=1668790992~hmac=fc0aca5cf057e6780e4f670a7f538a51cb84a0d665f3ee53920578d6245a56c2",
+        "enabled": true
       }
+
     ]
   }
