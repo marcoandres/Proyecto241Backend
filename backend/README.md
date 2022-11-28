@@ -24,3 +24,9 @@ Una vez abierto el terminal, se debe activar el entorno, por medio de:
 conda activate py311
 ```
 ![imagen](https://user-images.githubusercontent.com/109394677/204372160-82bfeca4-5dd0-4788-8cd6-d68ecdea4bbd.png)
+
+Una vez activado el entorno, debemos instalar los siguientes packages: 
+
+```bash
+conda install fastapi motor pydantic --channel conda-forge
+```
