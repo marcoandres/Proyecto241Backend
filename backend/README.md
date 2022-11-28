@@ -47,5 +47,8 @@ Acá se debe escribir el string de conexión a mongodb, reemplazando ELUSUARIO, 
 export MONGODB_URL="mongodb+srv://ELUSUARIO:LACLAVE@cluster0.ELSERVIDOR.mongodb.net/LABASEDEDATOS?retryWrites=true&w=majority"
 ```
 
-
+PAra iniciar el proyecto, desde el directorio mongoapi, se debe ejecutar la instrucción
+```bash
+uvicorn main:app --reload
+```
 
