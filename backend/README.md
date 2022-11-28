@@ -16,6 +16,11 @@ Una vez que ha terminado de instalar Python 311 por medio de Conda, se debe acti
 
 ```bash
 conda init bash
+```
+Una vez iniciado conda, se debe cerrar el terminal, y luego abrir nuevamente. 
+Una vez abierto el terminal, se debe activar el entorno, por medio de: 
+
+```bash
 conda activate py311
 ```
 ![imagen](https://user-images.githubusercontent.com/109394677/204372160-82bfeca4-5dd0-4788-8cd6-d68ecdea4bbd.png)
