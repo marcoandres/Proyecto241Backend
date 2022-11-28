@@ -2,8 +2,8 @@
 Proyecto de desarrollo de proyecto
 
 ## El siguiente proyecto, consta de 2 Partes, cada uno con las instrucciones correspondientes: 
-* [a relative link]BACKEND
-* FRONTEND
+* [BACKEND](backend/README.md)
+* [FRONTEND](frontend/README.md)
 
 
 La carpeta Backend, está compuesta por FastAPI, para mongoDB Atlas.
