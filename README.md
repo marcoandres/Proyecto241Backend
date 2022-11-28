@@ -1,7 +1,7 @@
 # Proyecto241Backend
 Proyecto de desarrollo de proyecto
 
-# El siguiente proyecto, consta de 2 Partes, cada uno con las instrucciones correspondientes: 
+## El siguiente proyecto, consta de 2 Partes, cada uno con las instrucciones correspondientes: 
 * BACKEND
 * FRONTEND
 
