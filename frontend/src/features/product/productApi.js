@@ -1,20 +1,32 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+const API_KEY = "tGZE8c6wIS53mOG1pv4dLtBRnN09aoBwmJCPtzjjNCjDFgxHeth3Pvg30edCjZuw"
 
 // Define a service using a base URL and expected endpoints
 export const productApi = createApi({
   reducerPath: 'productApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:4000/' }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'http://localhost:8000/api/',
+    prepareHeaders: (headers, { getState }) => {
+      headers.set('Content-Type', 'application/json')
+      return headers
+    }
+  }),
   endpoints: (builder) => ({
     getProductsByName: builder.query({
-      query: (name) => `products/${name}`,
+      query: (name) => `producto/${name}`,
     }),
-    getProducts : builder.query({
-        query: (name) => `products/`,
-        prepareHeaders: (headers, { getState }) => {
-            headers.set('Access-Control-Allow-Origin', '*')
-            return headers
+    getProducts: builder.query({
+      query: (user => ({
+        url: `productos`,
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+          'mode': 'cors', 
+          'Access-Control-Allow-Origin': '*',
         }
-      }),
+      }))
+    }),
   }),
 })
 

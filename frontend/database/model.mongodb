@@ -1,0 +1,73 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('sistema');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+db.producto.drop();
+
+// Insert a few documents into the sales collection.
+db.producto.insertMany([
+  { 
+    '_id': 1, 'uuid': ObjectId(),'title': 'Témpera Artel 8 Colores', 'price': 10, 'quantity': 2, 'image':'1.png','date': new Date('2014-03-01T08:00:00Z'),
+    'category': 'Cocina', 'description': 'Témpera Artel', 'rating': 4.5, 'reviews': 10
+  },
+  { '_id': 2, 'uuid': ObjectId(), 'title': 'Croquera 16 x 21 cm', 'price': 20, 'quantity': 1, 'image':'2.png', 'date': new Date('2014-03-01T09:00:00Z') },
+  { '_id': 3, 'uuid': ObjectId(), 'title': 'Cinta 500 Transparente Pack 3 Rollos', 'price': 5, 'quantity': 10, 'image':'3.png', 'date': new Date('2014-03-15T09:00:00Z') },
+  { '_id': 4, 'uuid': ObjectId(), 'title': 'Pistola de Juguete Nerf Naranjo', 'price': 5, 'quantity':  20, 'image':'4.png', 'date': new Date('2014-04-04T11:21:39.736Z') },
+  { '_id': 5, 'uuid': ObjectId(), 'title': 'Veneno para ratas Anasac Control', 'price': 10, 'quantity': 10, 'image':'5.png', 'date': new Date('2014-04-04T21:23:13.331Z') },
+  { '_id': 6, 'uuid': ObjectId(), 'title': 'Lápices de Colores Neon 6x1 torre', 'price': 7.5, 'quantity': 5, 'image':'6.png', 'date': new Date('2015-06-04T05:08:13Z') },
+  { '_id': 7, 'uuid': ObjectId(), 'title': 'Pila Energizer AA pack x 8', 'price': 7.5, 'quantity': 10,'image':'7.png',  'date': new Date('2015-09-10T08:43:00Z') },
+  { '_id': 8, 'uuid': ObjectId(), 'title': 'Pistola Nerf con repuestos set x10', 'price': 10, 'quantity': 55, 'image':'8.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 9, 'uuid': ObjectId(), 'title': 'Pelota Ping-Pong Naranjo Sensei', 'price': 10, 'quantity': 23, 'image':'9.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 10, 'uuid': ObjectId(), 'title': 'Veneno para ratas Anasac control pack x2', 'price': 9.8, 'quantity': 11, 'image':'10.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 11, 'uuid': ObjectId(), 'title': 'Palillos de cóctel bambú 100 unids', 'price': 12, 'quantity': 8, 'image':'11.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 12, 'uuid': ObjectId(), 'title': 'Pilas AA Energizer pack 8', 'price': 11, 'quantity': 5, 'image':'12.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 13, 'uuid': ObjectId(), 'title': 'Play-Doh juego plastilina pack X8', 'price': 19, 'quantity': 3, 'image':'13.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 14, 'uuid': ObjectId(), 'title': 'Cola Fría Torre 20g Blanco', 'price': 1, 'quantity': 7, 'image':'14.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 15, 'uuid': ObjectId(), 'title': 'Pila Alcalina unid Energizer Max', 'price': 4, 'quantity': 9, 'image':'15.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 16, 'uuid': ObjectId(), 'title': 'Sacapuntas Maped Rodillo de metal', 'price': 7, 'quantity': 15, 'image':'16.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 17, 'uuid': ObjectId(), 'title': 'Play-doh plastilina pack x3', 'price': 8, 'quantity': 53, 'image':'17.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 18, 'uuid': ObjectId(), 'title': 'WD-40 Antioxido 100ml Spray', 'price': 11, 'quantity': 25, 'image':'18.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 19, 'uuid': ObjectId(), 'title': 'Play-Doh bucket 30g x4', 'price': 13, 'quantity': 45, 'image':'19.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 20, 'uuid': ObjectId(), 'title': 'Figura de Acción Frozen II unit', 'price': 16, 'quantity': 56, 'image':'20.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 21, 'uuid': ObjectId(), 'title': 'Muñeco Bebé Blandito Hasbro', 'price': 11, 'quantity': 57, 'image':'21.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 22, 'uuid': ObjectId(), 'title': 'Pino con aroma, refrescante x1', 'price': 12, 'quantity': 50, 'image':'22.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 23, 'uuid': ObjectId(), 'title': 'Ambulancia Fricción 2002', 'price': 17, 'quantity': 12, 'image':'23.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 24, 'uuid': ObjectId(), 'title': 'Carro de Bomberos Fricción rojo 2032', 'price': 19, 'quantity': 15, 'image':'24.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 25, 'uuid': ObjectId(), 'title': 'Camión Tolva Amarillo fricción 2212', 'price': 12, 'quantity': 25, 'image':'25.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 26, 'uuid': ObjectId(), 'title': 'Set de autitos de colección x24 pcs', 'price': 11, 'quantity': 35, 'image':'26.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 27, 'uuid': ObjectId(), 'title': 'Ampolleta Rayovac 6W 220v', 'price': 1, 'quantity': 45, 'image':'27.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 28, 'uuid': ObjectId(), 'title': 'Kit de juego en casa autitos, y figuras', 'price': 11, 'quantity': 55, 'image':'28.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 29, 'uuid': ObjectId(), 'title': 'Ampolleta Rayovac Bajo Consumo 15W', 'price': 12, 'quantity': 65, 'image':'29.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 30, 'uuid': ObjectId(), 'title': 'Vehículo de Acción clásico rojo, Ferrari', 'price': 10, 'quantity': 45, 'image':'30.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 31, 'uuid': ObjectId(), 'title': 'Set Ampolleta Rayovac 25W', 'price': 16, 'quantity': 53, 'image':'31.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 32, 'uuid': ObjectId(), 'title': 'Renovador de Neumáticos KIT 360ml.', 'price': 19, 'quantity': 52, 'image':'32.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 33, 'uuid': ObjectId(), 'title': 'Set Peluches x6 variedad', 'price': 14, 'quantity': 15, 'image':'33.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 34, 'uuid': ObjectId(), 'title': 'Set de Globos Cumpleaños 50 unids', 'price': 12, 'quantity': 53, 'image':'34.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 35, 'uuid': ObjectId(), 'title': 'Pilas Energizer D2 par set x2', 'price': 11, 'quantity': 75, 'image':'35.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 36, 'uuid': ObjectId(), 'title': 'Pilas Energizer Max pack 4 D2', 'price': 11, 'quantity': 58, 'image':'36.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 37, 'uuid': ObjectId(), 'title': 'Silicona M2 330ml, Spray', 'price': 15, 'quantity': 65, 'image':'37.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 38, 'uuid': ObjectId(), 'title': 'Rompecabezas 1000 pcs  Casa Verano', 'price': 15, 'quantity': 5, 'image':'38.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 39, 'uuid': ObjectId(), 'title': 'Rompecabezas 1000 pcs Hansel ', 'price': 19, 'quantity': 54, 'image':'39.png', 'date': new Date('2016-02-06T20:20:13Z') },
+  { '_id': 40, 'uuid': ObjectId(), 'title': 'Producto 13', 'price': 10, 'quantity': 3, 'image':'40.png', 'date': new Date('2016-02-06T20:20:13Z') },
+ 
+]);
+
+// Run a find command to view items sold on April 4th, 2014.
+db.producto.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+// Build an aggregation to view total sales for each product in 2014.
+const aggregation = [
+  { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+  { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+];
+
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+db.producto.aggregate(aggregation);

@@ -1,17 +1,15 @@
 import React from 'react';
 import { Layout } from 'antd';
-import HeaderComp from '../../components/header'
-import FooterComp from '../../components/footer'
-import ContentComp from '../../components/content'
-import SiderComp from '../../components/sider'
-import ProductList from '../product/list';
+import HeaderComp from '../Header'
+import FooterComp from '../../components/Footer'
+import ContentComp from '../../components/Content'
+import './styles.css';
+
 const App = () => (
   <>
     <Layout>
-      <HeaderComp>Header</HeaderComp>
-      <ContentComp>
-        <ProductList />
-      </ContentComp>
+      <HeaderComp className="header" />
+      <ContentComp />
       <FooterComp>Footer</FooterComp>
     </Layout>
     </>

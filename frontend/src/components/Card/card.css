@@ -1,0 +1,8 @@
+.site-card{
+   width: auto;
+   margin-top: 1vh;
+   margin-bottom: 1vh;
+}
+.ant-card-actions{
+    border-radius: 10px;
+}

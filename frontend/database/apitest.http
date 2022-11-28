@@ -1,0 +1,26 @@
+@uri = https://data.mongodb-api.com/app/data-zqrnd/endpoint/data/beta
+@uriV1 = https://data.mongodb-api.com/app/data-zqrnd/endpoint/v1/
+
+GET http://localhost:4000/products
+
+###
+
+POST http://localhost:4000/users
+
+
+### Mongo DB
+POST {{uri}}/actions/find
+Content-Type: application/json
+Access-Control-Request-Headers: *
+
+{
+    "dataSource": "Cluster0",
+    "database": "sistema",
+    "collection": "producto"
+
+}
+
+###
+GET {{uriV1}}/productos?secret=.Inacap2022.
+Content-Type: application/json
+Access-Control-Request-Headers: *

@@ -1,0 +1,9 @@
+.card-row{
+    background-color: rgb(237, 237, 237);
+}
+.card-wrapper{
+    margin-top: 1vh;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    background-color: black;
+}
