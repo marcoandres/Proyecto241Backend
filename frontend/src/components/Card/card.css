@@ -6,3 +6,12 @@
 .ant-card-actions{
     border-radius: 10px;
 }
+.unstyled-button{
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    color: inherit;
+    font: inherit;
+}

@@ -11,16 +11,16 @@ use('sistema');
 db.producto.drop();
 
 // Insert a few documents into the sales collection.
-db.producto.insertMany([
+const productos = [
   { 
     '_id': 1, 'uuid': ObjectId(),'title': 'Témpera Artel 8 Colores', 'price': 10, 'quantity': 2, 'image':'1.png','date': new Date('2014-03-01T08:00:00Z'),
     'category': 'Cocina', 'description': 'Témpera Artel', 'rating': 4.5, 'reviews': 10
   },
-  { '_id': 2, 'uuid': ObjectId(), 'title': 'Croquera 16 x 21 cm', 'price': 20, 'quantity': 1, 'image':'2.png', 'date': new Date('2014-03-01T09:00:00Z') },
-  { '_id': 3, 'uuid': ObjectId(), 'title': 'Cinta 500 Transparente Pack 3 Rollos', 'price': 5, 'quantity': 10, 'image':'3.png', 'date': new Date('2014-03-15T09:00:00Z') },
-  { '_id': 4, 'uuid': ObjectId(), 'title': 'Pistola de Juguete Nerf Naranjo', 'price': 5, 'quantity':  20, 'image':'4.png', 'date': new Date('2014-04-04T11:21:39.736Z') },
-  { '_id': 5, 'uuid': ObjectId(), 'title': 'Veneno para ratas Anasac Control', 'price': 10, 'quantity': 10, 'image':'5.png', 'date': new Date('2014-04-04T21:23:13.331Z') },
-  { '_id': 6, 'uuid': ObjectId(), 'title': 'Lápices de Colores Neon 6x1 torre', 'price': 7.5, 'quantity': 5, 'image':'6.png', 'date': new Date('2015-06-04T05:08:13Z') },
+  { '_id': 2, 'uuid': ObjectId(), 'title': 'Croquera 16 x 21 cm', 'description':'Descripcion del producto. Croquera ', 'price': 20, 'quantity': 1, 'image':'2.png', 'date': new Date('2014-03-01T09:00:00Z') },
+  { '_id': 3, 'uuid': ObjectId(), 'title': 'Cinta 500 Transparente Pack 3 Rollos', 'description':'Descripcion del producto. CINTA ', 'price': 5, 'quantity': 10, 'image':'3.png', 'date': new Date('2014-03-15T09:00:00Z') },
+  { '_id': 4, 'uuid': ObjectId(), 'title': 'Pistola de Juguete Nerf Naranjo', 'description':'Descripcion del producto. Nerf ', 'price': 5, 'quantity':  20, 'image':'4.png', 'date': new Date('2014-04-04T11:21:39.736Z') },
+  { '_id': 5, 'uuid': ObjectId(), 'title': 'Veneno para ratas Anasac Control', 'description':'Descripcion del producto. Control ', 'price': 10, 'quantity': 10, 'image':'5.png', 'date': new Date('2014-04-04T21:23:13.331Z') },
+  { '_id': 6, 'uuid': ObjectId(), 'title': 'Lápices de Colores Neon 6x1 torre', 'description':'Descripcion del producto. Torre ', 'price': 7.5, 'quantity': 5, 'image':'6.png', 'date': new Date('2015-06-04T05:08:13Z') },
   { '_id': 7, 'uuid': ObjectId(), 'title': 'Pila Energizer AA pack x 8', 'price': 7.5, 'quantity': 10,'image':'7.png',  'date': new Date('2015-09-10T08:43:00Z') },
   { '_id': 8, 'uuid': ObjectId(), 'title': 'Pistola Nerf con repuestos set x10', 'price': 10, 'quantity': 55, 'image':'8.png', 'date': new Date('2016-02-06T20:20:13Z') },
   { '_id': 9, 'uuid': ObjectId(), 'title': 'Pelota Ping-Pong Naranjo Sensei', 'price': 10, 'quantity': 23, 'image':'9.png', 'date': new Date('2016-02-06T20:20:13Z') },
@@ -56,7 +56,8 @@ db.producto.insertMany([
   { '_id': 39, 'uuid': ObjectId(), 'title': 'Rompecabezas 1000 pcs Hansel ', 'price': 19, 'quantity': 54, 'image':'39.png', 'date': new Date('2016-02-06T20:20:13Z') },
   { '_id': 40, 'uuid': ObjectId(), 'title': 'Producto 13', 'price': 10, 'quantity': 3, 'image':'40.png', 'date': new Date('2016-02-06T20:20:13Z') },
  
-]);
+];
+db.producto.insertMany(productos);
 
 // Run a find command to view items sold on April 4th, 2014.
 db.producto.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
