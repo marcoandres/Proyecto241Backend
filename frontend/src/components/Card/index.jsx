@@ -9,6 +9,11 @@ const App = (props) => {
   const onChange = (value) => {
     console.log('changed', value);
   };
+  const onClick = (e,value) => {
+    e.stopPropagation();
+    e.preventDefault();
+    console.log('clicked', value);
+  };
   return (
     
     <Card key={uuid()} className="site-card"  onClick={props.onClick}
@@ -18,14 +23,14 @@ const App = (props) => {
       }}
       cover={<img key={uuid()} alt="example" src={image} />}
       actions={[
-        <ButtonComp onClick={props.onAddToCart} />,
+        <ButtonComp onClick={(e)=>props.onAddToCart(e,e.target.value)} />,
       ]}
     >
       <Meta title={props.data.title} description={props.data.description} />
       <div className='price'>
         <strong>$ {props.data.price} c/u</strong>
         <div>
-          Disponibles: {props.data.quantity} <InputNumber size="large" min={1} max={props.data.quantity} defaultValue={1} onChange={onChange} />
+          Disponibles: {props.data.quantity} <InputNumber className='cantidad' size="large" min={1} max={props.data.quantity} defaultValue={1} onClick={(e)=>onClick(e,e.target.value)} onChange={onChange} />
         </div>
       </div>
     </Card>

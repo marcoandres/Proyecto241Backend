@@ -14,7 +14,8 @@ export const ProductList = () => {
     const [item, setItem] = useState({});
     const [texto, setTexto] = useState('TU EMPRESA');
     const ToogleModal = () => setModalProduct(!modalProduct);
-    const onAddToCart = (id) => {
+    const onAddToCart = (e,id) => {
+        e.stopPropagation();
         console.log('boton',id);
     }
     const onClick = (id) => {
@@ -43,7 +44,7 @@ export const ProductList = () => {
                         data.map((item, index) => {
                             return (
                                 <Col key={uuid()}>
-                                    <CardComp key={index} data={item} onAddToCart={onAddToCart(item)} onClick={(e)=>{showModalProduct(item,e)}} />
+                                    <CardComp key={index} data={item} onAddToCart={onAddToCart} onClick={(e)=>{showModalProduct(item,e)}} />
                                 </Col>
                            )
                         })
