@@ -6,9 +6,7 @@ import { v4 as uuid } from 'uuid';
 const { Meta } = Card;
 const App = (props) => {
   const image = `assets/img/${props.data.image}`;
-  const onChange = (e,value) => {
-    e.stopPropagation();
-    e.preventDefault();
+  const onChange = (value) => {
     console.log('changed', value);
   };
   const onClick = (e,value) => {
@@ -32,7 +30,7 @@ const App = (props) => {
       <div className='price'>
         <strong>$ {props.data.price} c/u</strong>
         <div>
-          Disponibles: {props.data.quantity} <InputNumber className='cantidad' size="large" min={1} max={props.data.quantity} defaultValue={1} onClick={(e)=>onClick(e,e.target.value)} onChange={(e)=> onChange(e,e.target.value)} />
+          Disponibles: {props.data.quantity} <InputNumber className='cantidad' size="large" min={1} max={props.data.quantity} defaultValue={1} onClick={(e)=>onClick(e,e.target.value)} onChange={onChange} />
         </div>
       </div>
     </Card>
