@@ -25,16 +25,20 @@ const App = ({ show, close, items }) => {
             </Col>
 
           </Row>
-          {`
-          Title : ${items.title}
-        
-        Description : ${items.description}
-        
-        Price : ${items.price}
-        
-        Quantity: ${items.quantity}
-        
-        Image:  ${items.image}`}
+          <Row>
+            <Col span={24}>
+              <strong>Title</strong> : {items.title}
+              <br />
+              <strong>Description</strong> : {items.description}
+              <br />
+              <strong> Price</strong> : {items.price}
+              <br />
+              <strong>Quantity</strong>: {items.quantity}
+              <br />
+              <strong>Image: </strong> ${items.image}
+            </Col>
+          </Row>
+
 
         </Space>
 

@@ -24,7 +24,8 @@ export const ProductList = () => {
         e.preventDefault();
         setTexto(e.target.value);
     }
-    const showModalProduct = (item) => {
+    const showModalProduct = (item,e) => {
+       // e.stopPropagation();
         setModalProduct(true);
         setItem(item);
         console.log("MODAL", item)
@@ -42,7 +43,7 @@ export const ProductList = () => {
                         data.map((item, index) => {
                             return (
                                 <Col key={uuid()}>
-                                    <CardComp key={index} data={item} onAddToCart={onAddToCart(item)} onClick={()=>{showModalProduct(item)}} />
+                                    <CardComp key={index} data={item} onAddToCart={onAddToCart(item)} onClick={(e)=>{showModalProduct(item,e)}} />
                                 </Col>
                            )
                         })
