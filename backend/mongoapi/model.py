@@ -9,8 +9,9 @@ from uuid import UUID
 
 class Producto(BaseModel):
     _id : str
-    #uuid: int | str | UUID
+    uuid: int | str | UUID = Field(default_factory=UUID, alias="_id")
     title: str
+    description: Optional[str] = None
     price: float
     image: str
     quantity: int

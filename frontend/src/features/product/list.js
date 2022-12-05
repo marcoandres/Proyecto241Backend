@@ -1,27 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGetProductsQuery } from "./productApi";
 import CardComp from '../../components/Card';
 import ProductSkeleton from './productSkeleton';
-import { Row, Col, Space, Skeleton } from 'antd';
+import Product from '../product';
+import { Row, Col, Space, Skeleton, Input } from 'antd';
+import CarouselComp from '../../components/Carousel';
 import { v4 as uuid } from "uuid";
 import './styles.css';
 
 export const ProductList = () => {
     const { data = [], error, isLoading } = useGetProductsQuery();
+    const [modalProduct, setModalProduct] = useState(false);
+    const [item, setItem] = useState({});
+    const [texto, setTexto] = useState('TU EMPRESA');
+    const ToogleModal = () => setModalProduct(!modalProduct);
     const onAddToCart = (id) => {
         console.log('boton',id);
+    }
+    const onClick = (id) => {
+        console.log('card',id);
+    }
+    const handleInput = (e) => {
+        e.preventDefault();
+        setTexto(e.target.value);
+    }
+    const showModalProduct = (item) => {
+        setModalProduct(true);
+        setItem(item);
+        console.log("MODAL", item)
     }
     if (isLoading) return <ProductSkeleton loading={isLoading} />
     if (!data) return <div>Missing post!</div>
     return (
         <div className="card-wrapper">
+            <Input placeholder="EL NOMBRE DE TU EMPRESA" onChange={handleInput} />
+            <CarouselComp data={texto}/>
+            <Product show={modalProduct} close={()=>ToogleModal()} items={item} />
             <Row key={uuid()} gutter={[24, 16]} className="card-row">
 
                     {
                         data.map((item, index) => {
                             return (
                                 <Col key={uuid()}>
-                                    <CardComp key={index} data={item} onAddToCart={onAddToCart(item)} />
+                                    <CardComp key={index} data={item} onAddToCart={onAddToCart(item)} onClick={()=>{showModalProduct(item)}} />
                                 </Col>
                            )
                         })

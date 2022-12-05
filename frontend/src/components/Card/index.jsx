@@ -10,7 +10,8 @@ const App = (props) => {
     console.log('changed', value);
   };
   return (
-    <Card key={uuid()} className="site-card"
+    
+    <Card key={uuid()} className="site-card"  onClick={props.onClick}
       hoverable
       style={{
         width: 200,
@@ -24,10 +25,11 @@ const App = (props) => {
       <div className='price'>
         <strong>$ {props.data.price} c/u</strong>
         <div>
-          Cantidad: <InputNumber size="large" min={1} max={99} defaultValue={1} onChange={onChange} />
+          Disponibles: {props.data.quantity} <InputNumber size="large" min={1} max={props.data.quantity} defaultValue={1} onChange={onChange} />
         </div>
       </div>
     </Card>
+
   );
 }
 export default App;
