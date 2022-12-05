@@ -8,7 +8,7 @@ use('sistema');
 
 // The drop() command destroys all data from a collection.
 // Make sure you run it against the correct database and collection.
-db.producto.drop();
+//db.producto.drop();
 
 // Insert a few documents into the sales collection.
 db.producto.insertMany([
